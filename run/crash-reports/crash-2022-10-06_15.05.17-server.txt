@@ -1,0 +1,235 @@
+---- Minecraft Crash Report ----
+// Why did you do that?
+
+Time: 2022-10-06 15:05:17
+Description: Saving entity NBT
+
+java.lang.NullPointerException: Cannot invoke "net.minecraft.resources.ResourceLocation.toString()" because the return value of "net.minecraft.core.Registry.getKey(Object)" is null
+	at net.minecraft.world.entity.ai.attributes.AttributeInstance.save(AttributeInstance.java:173) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.ai.attributes.AttributeMap.save(AttributeMap.java:113) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.LivingEntity.addAdditionalSaveData(LivingEntity.java:662) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.Mob.addAdditionalSaveData(Mob.java:342) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.entity.AgeableMob.addAdditionalSaveData(AgeableMob.java:97) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.animal.Animal.addAdditionalSaveData(Animal.java:84) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.animal.Bee.addAdditionalSaveData(Bee.java:183) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.Entity.saveWithoutId(Entity.java:1525) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.entity.Entity.saveAsPassenger(Entity.java:1451) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.entity.Entity.save(Entity.java:1458) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.level.block.entity.BeehiveBlockEntity.addOccupantWithPresetTicks(BeehiveBlockEntity.java:134) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.level.block.entity.BeehiveBlockEntity.addOccupant(BeehiveBlockEntity.java:112) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.animal.Bee$BeeEnterHiveGoal.start(Bee.java:716) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.ai.goal.WrappedGoal.start(WrappedGoal.java:35) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.ai.goal.GoalSelector.tick(GoalSelector.java:106) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.Mob.serverAiStep(Mob.java:709) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.entity.LivingEntity.aiStep(LivingEntity.java:2546) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.Mob.aiStep(Mob.java:501) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.entity.AgeableMob.aiStep(AgeableMob.java:117) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.animal.Animal.aiStep(Animal.java:53) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.animal.Bee.aiStep(Bee.java:447) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.LivingEntity.tick(LivingEntity.java:2291) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.Mob.tick(Mob.java:313) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.entity.animal.Bee.tick(Bee.java:247) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.server.level.ServerLevel.tickNonPassenger(ServerLevel.java:658) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.level.Level.guardEntityTick(Level.java:457) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.level.ServerLevel.lambda$tick$3(ServerLevel.java:323) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.level.entity.EntityTickList.forEach(EntityTickList.java:53) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.server.level.ServerLevel.tick(ServerLevel.java:303) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:866) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:806) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:84) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:654) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:244) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:833) [?:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at net.minecraft.world.entity.ai.attributes.AttributeInstance.save(AttributeInstance.java:173) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.ai.attributes.AttributeMap.save(AttributeMap.java:113) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.LivingEntity.addAdditionalSaveData(LivingEntity.java:662) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.Mob.addAdditionalSaveData(Mob.java:342) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.entity.AgeableMob.addAdditionalSaveData(AgeableMob.java:97) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.animal.Animal.addAdditionalSaveData(Animal.java:84) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.animal.Bee.addAdditionalSaveData(Bee.java:183) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.Entity.saveWithoutId(Entity.java:1525) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.entity.Entity.saveAsPassenger(Entity.java:1451) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.entity.Entity.save(Entity.java:1458) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.level.block.entity.BeehiveBlockEntity.addOccupantWithPresetTicks(BeehiveBlockEntity.java:134) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.level.block.entity.BeehiveBlockEntity.addOccupant(BeehiveBlockEntity.java:112) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.animal.Bee$BeeEnterHiveGoal.start(Bee.java:716) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.ai.goal.WrappedGoal.start(WrappedGoal.java:35) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.ai.goal.GoalSelector.tick(GoalSelector.java:106) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.Mob.serverAiStep(Mob.java:709) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.entity.LivingEntity.aiStep(LivingEntity.java:2546) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.Mob.aiStep(Mob.java:501) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.entity.AgeableMob.aiStep(AgeableMob.java:117) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.animal.Animal.aiStep(Animal.java:53) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.animal.Bee.aiStep(Bee.java:447) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.LivingEntity.tick(LivingEntity.java:2291) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.Mob.tick(Mob.java:313) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.entity.animal.Bee.tick(Bee.java:247) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.server.level.ServerLevel.tickNonPassenger(ServerLevel.java:658) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.level.Level.guardEntityTick(Level.java:457) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.level.ServerLevel.lambda$tick$3(ServerLevel.java:323) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.level.entity.EntityTickList.forEach(EntityTickList.java:53) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.server.level.ServerLevel.tick(ServerLevel.java:303) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+-- Entity being saved --
+Details:
+	Entity Type: minecraft:bee (net.minecraft.world.entity.animal.Bee)
+	Entity ID: 740
+	Entity Name: Bee
+	Entity's Exact location: 51.75, 120.20, -103.60
+	Entity's Block location: World: (51,120,-104), Section: (at 3,8,8 in 3,7,-7; chunk contains blocks 48,-64,-112 to 63,319,-97), Region: (0,-1; contains chunks 0,-32 to 31,-1, blocks 0,-64,-512 to 511,319,-1)
+	Entity's Momentum: -0.05, -0.14, -0.09
+	Entity's Passengers: []
+	Entity's Vehicle: null
+Stacktrace:
+	at net.minecraft.world.entity.Entity.saveWithoutId(Entity.java:1525) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.entity.Entity.saveAsPassenger(Entity.java:1451) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.entity.Entity.save(Entity.java:1458) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.level.block.entity.BeehiveBlockEntity.addOccupantWithPresetTicks(BeehiveBlockEntity.java:134) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.level.block.entity.BeehiveBlockEntity.addOccupant(BeehiveBlockEntity.java:112) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.animal.Bee$BeeEnterHiveGoal.start(Bee.java:716) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.ai.goal.WrappedGoal.start(WrappedGoal.java:35) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.ai.goal.GoalSelector.tick(GoalSelector.java:106) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.Mob.serverAiStep(Mob.java:709) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.entity.LivingEntity.aiStep(LivingEntity.java:2546) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.Mob.aiStep(Mob.java:501) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.entity.AgeableMob.aiStep(AgeableMob.java:117) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.animal.Animal.aiStep(Animal.java:53) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.animal.Bee.aiStep(Bee.java:447) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.LivingEntity.tick(LivingEntity.java:2291) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.world.entity.Mob.tick(Mob.java:313) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.entity.animal.Bee.tick(Bee.java:247) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.server.level.ServerLevel.tickNonPassenger(ServerLevel.java:658) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.level.Level.guardEntityTick(Level.java:457) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.level.ServerLevel.lambda$tick$3(ServerLevel.java:323) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.level.entity.EntityTickList.forEach(EntityTickList.java:53) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.server.level.ServerLevel.tick(ServerLevel.java:303) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:866) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:806) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:84) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:654) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:244) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:833) [?:?] {}
+
+
+-- Entity being ticked --
+Details:
+	Entity Type: minecraft:bee (net.minecraft.world.entity.animal.Bee)
+	Entity ID: 740
+	Entity Name: Bee
+	Entity's Exact location: 51.75, 120.20, -103.60
+	Entity's Block location: World: (51,120,-104), Section: (at 3,8,8 in 3,7,-7; chunk contains blocks 48,-64,-112 to 63,319,-97), Region: (0,-1; contains chunks 0,-32 to 31,-1, blocks 0,-64,-512 to 511,319,-1)
+	Entity's Momentum: -0.05, -0.14, -0.09
+	Entity's Passengers: []
+	Entity's Vehicle: null
+Stacktrace:
+	at net.minecraft.world.level.Level.guardEntityTick(Level.java:457) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.level.ServerLevel.lambda$tick$3(ServerLevel.java:323) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.level.entity.EntityTickList.forEach(EntityTickList.java:53) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading}
+	at net.minecraft.server.level.ServerLevel.tick(ServerLevel.java:303) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:866) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:806) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:84) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:654) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:244) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:833) [?:?] {}
+
+
+-- Affected level --
+Details:
+	All players: 1 total; [ServerPlayer['Dev'/325, l='ServerLevel[New World]', x=-1.61, y=124.00, z=-6.83]]
+	Chunk stats: 2809
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (0,121,0), Section: (at 0,9,0 in 0,7,0; chunk contains blocks 0,-64,0 to 15,319,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,-64,0 to 511,319,511)
+	Level time: 664 game time, 664 day time
+	Level name: New World
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: true
+	Level weather: Rain time: 164705 (now: false), thunder time: 177061 (now: false)
+	Known server brands: forge
+	Level was modded: true
+	Level storage version: 0x04ABD - Anvil
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:866) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:806) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:84) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:654) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:244) ~[forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.jar%23183!/:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:833) [?:?] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.19.2
+	Minecraft Version ID: 1.19.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 17.0.2, Eclipse Adoptium
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Eclipse Adoptium
+	Memory: 770816368 bytes (735 MiB) / 2109734912 bytes (2012 MiB) up to 6396313600 bytes (6100 MiB)
+	CPUs: 12
+	Processor Vendor: GenuineIntel
+	Processor Name: Intel(R) Core(TM) i5-10500H CPU @ 2.50GHz
+	Identifier: Intel64 Family 6 Model 165 Stepping 2
+	Microarchitecture: unknown
+	Frequency (GHz): 2.50
+	Number of physical packages: 1
+	Number of physical CPUs: 6
+	Number of logical CPUs: 12
+	Graphics card #0 name: NVIDIA GeForce RTX 3060 Laptop GPU
+	Graphics card #0 vendor: NVIDIA (0x10de)
+	Graphics card #0 VRAM (MB): 4095.00
+	Graphics card #0 deviceId: 0x2520
+	Graphics card #0 versionInfo: DriverVersion=30.0.14.9717
+	Graphics card #1 name: Intel(R) UHD Graphics
+	Graphics card #1 vendor: Intel Corporation (0x8086)
+	Graphics card #1 VRAM (MB): 1024.00
+	Graphics card #1 deviceId: 0x9bc4
+	Graphics card #1 versionInfo: DriverVersion=30.0.101.1340
+	Memory slot #0 capacity (MB): 8192.00
+	Memory slot #0 clockSpeed (GHz): 3.20
+	Memory slot #0 type: DDR4
+	Memory slot #1 capacity (MB): 16384.00
+	Memory slot #1 clockSpeed (GHz): 3.20
+	Memory slot #1 type: DDR4
+	Virtual memory max (MB): 27981.77
+	Virtual memory used (MB): 18944.08
+	Swap memory total (MB): 3584.00
+	Swap memory used (MB): 35.95
+	JVM Flags: 1 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
+	Server Running: true
+	Player Count: 1 / 8; [ServerPlayer['Dev'/325, l='ServerLevel[New World]', x=-1.61, y=124.00, z=-6.83]]
+	Data Packs: vanilla, mod:forge, mod:examplemod
+	World Generation: Stable
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'forge'; Server brand changed to 'forge'
+	Launched Version: MOD_DEV
+	ModLauncher: 10.0.8+10.0.8+main.0ef7e830
+	ModLauncher launch target: forgeclientuserdev
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		mixin-0.8.5.jar mixin PLUGINSERVICE 
+		eventbus-6.0.3.jar eventbus PLUGINSERVICE 
+		fmlloader-1.19.2-43.1.3.jar slf4jfixer PLUGINSERVICE 
+		fmlloader-1.19.2-43.1.3.jar object_holder_definalize PLUGINSERVICE 
+		fmlloader-1.19.2-43.1.3.jar runtime_enum_extender PLUGINSERVICE 
+		fmlloader-1.19.2-43.1.3.jar capability_token_subclass PLUGINSERVICE 
+		accesstransformers-8.0.4.jar accesstransformer PLUGINSERVICE 
+		fmlloader-1.19.2-43.1.3.jar runtimedistcleaner PLUGINSERVICE 
+		modlauncher-10.0.8.jar mixin TRANSFORMATIONSERVICE 
+		modlauncher-10.0.8.jar fml TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		minecraft@1.0
+		lowcodefml@null
+		javafml@null
+	Mod List: 
+		forge-1.19.2-43.1.3_mapped_official_1.19.2-recomp.|Minecraft                     |minecraft                     |1.19.2              |DONE      |Manifest: a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		                                                  |Forge                         |forge                         |43.1.3              |DONE      |Manifest: NOSIGNATURE
+		main                                              |Crystal Mod                   |examplemod                    |0.0.1-1.19          |DONE      |Manifest: NOSIGNATURE
+	Crash Report UUID: b04f242c-5dff-4bdf-9270-4feb43567b4b
+	FML: 43.1
+	Forge: net.minecraftforge:43.1.3
