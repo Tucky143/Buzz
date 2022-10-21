@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:jigsaw",
+
+  "start_pool": "examplemod:bee_house/start_pool",
+
+  "biomes": "#examplemod:has_structure/bee_house",
+
+    "step": "surface_structures",
+
+   "start_height": {
+    "absolute": 60
+  }
+}

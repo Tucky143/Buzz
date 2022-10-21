@@ -1,0 +1,17 @@
+{
+    "structures": [
+      {
+        "structure": "examplemod:bee_house",
+        "weight": 1
+      }
+    ],
+    "placement": {
+      "salt": 16421364741,
+  
+      "spacing": 20,
+  
+      "separation": 7,
+  
+      "type": "minecraft:random_spread"
+    }
+  }
